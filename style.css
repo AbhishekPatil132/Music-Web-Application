@@ -1,5 +1,5 @@
 body{
-    background-image: url('./pexels-sebastian-ervi-1763075.jpg');
+    background-image: url('./Desktop\ -\ 1.png');
     background-repeat: no-repeat;
     background-size:cover;
     color: rgb(247, 229, 204);
@@ -158,80 +158,39 @@ body{
   }
 
 
-.header{
-    display: flex;
-    justify-content: center;
+
+.row{
+  padding: 10px;
 }
 
-.nav {
-    display: flex;
-    justify-content: space-around;
-  }
-  
-.nav a {
-    padding-top: 3%;
-    margin: 0 20px;
-}
-
-.nav a {
-  color: #ffdb8d;
+a{
   text-decoration: none;
-  font-size: 1.5rem;
-  font-weight: 700;
-  position: relative;
 }
 
-.nav a::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -2px;
-  width: 0;
-  height: 2px;
-  background-color: #ffea00;
-  transition: width 0.3s ease-in-out;
+#dashboard{
+  display: flex;
+  border: 0 0 2px 2px solid red;
 }
 
-.nav a:hover::after {
-  width: 100%;
-}
-
-
-#nav-div {
-  filter: blur(2.5px);
-}
-
-#nav-div:hover {
-  filter: blur(0);
-  brightness: 150%;
-}
-
-
-.home-content{
-  padding-top: 3%;
-}
-
-.music-parts{
-  padding-left: 5rem;
-  width: fit-content;
-  text-decoration: none;
-  cursor: pointer;
-}
-
-.music-parts i{
+#dashboard h3{
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   font-size: 2rem;
-  color: black;
+  margin-left: 5px;
+  margin-top: -1px;
 }
 
-.music-parts a {
-  transition: transform 1s ease;
+.nvbar a{
+  font-size: 1.5rem;
+  color: #ff7c7c;
+  margin-left: 2rem;
 }
 
-.music-parts a:hover {
-  transform: scale(1.1);
+.User{
+  display: flex;
 }
 
-#track-name{
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  font-weight: 700;
+.User a{
+  font-size: 1.5rem;
+  text-decoration: none;
+  color: #ff7c7c;
 }
