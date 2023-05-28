@@ -19,143 +19,6 @@ body{
     margin: 0;
     background-color: #ffd8d8;
   }
-  
-  .tb {
-    display: table;
-    width: 100%;
-  }
-  
-  .td {
-    display: table-cell;
-    vertical-align: middle;
-  }
-  
-  input,
-  button {
-    color: #fff;
-    font-family: Nunito;
-    padding: 0;
-    margin: 0;
-    border: 0;
-    background-color: transparent;
-  }
-  
-  #cover {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 500px;
-    padding: 10px;
-    margin: -20px auto 0 auto;
-    margin-right: -90px;
-    background: transparent;
-    border-radius: 20px;
-    box-shadow: 0 10px 40px #ff7c7c;
-    transform: scale(0.6);
-  }
-  
-  form {
-    height: 96px;
-  }
-  
-  input[type="text"] {
-    width: 100%;
-    height: 96px;
-    font-size: 60px;
-    line-height: 1;
-  }
-  
-  input[type="text"]::placeholder {
-    
-    color: #fab6b6;
-  }
-  
-  #s-cover {
-    width: 1px;
-    padding-left: 35px;
-  }
-  
-  button {
-    position: relative;
-    display: block;
-    width: 84px;
-    height: 96px;
-    cursor: pointer;
-  }
-  
-  #s-circle {
-    position: relative;
-    top: -8px;
-    left: 0;
-    width: 65px;
-    height: 65px;
-    margin-top: 0;
-    border-width: 15px;
-    border: 15px solid #fff;
-    background-color: transparent;
-    border-radius: 50%;
-    transition: .5s ease all;
-  }
-  
-  button span {
-    position: absolute;
-    top: 68px;
-    left: 43px;
-    display: block;
-    width: 45px;
-    height: 15px;
-    background-color: transparent;
-    border-radius: 10px;
-    transform: rotateZ(52deg);
-    transition: 0.5s ease all;
-  }
-  
-  button span:before,
-  button span:after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    width: 45px;
-    height: 15px;
-    background-color: #fff;
-    border-radius: 10px;
-    transform: rotateZ(0);
-    transition: 0.5s ease all;
-  }
-  
-  #s-cover:hover #s-circle {
-    top: -1px;
-    width: 67px;
-    height: 15px;
-    border-width: 0;
-    background-color: #fff;
-    border-radius: 20px;
-  }
-  
-  #s-cover:hover span {
-    top: 50%;
-    left: 56px;
-    width: 25px;
-    margin-top: -9px;
-    transform: rotateZ(0);
-  }
-  
-  #s-cover:hover button span:before {
-    bottom: 11px;
-    transform: rotateZ(52deg);
-  }
-  
-  #s-cover:hover button span:after {
-    bottom: -11px;
-    transform: rotateZ(-52deg);
-  }
-  #s-cover:hover button span:before,
-  #s-cover:hover button span:after {
-    right: -6px;
-    width: 40px;
-    background-color: #fff;
-  }
 
 
 
@@ -185,7 +48,28 @@ line-height: 40px;
   font-size: 1.5rem;
   color: #ff7c7c;
   margin-left: 2rem;
+  padding-bottom: 4px;
+  position: relative;
+  text-decoration: none;
 }
+
+.nvbar a::after{
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #ff6537;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: .3s ease-in;
+}
+
+.nvbar a:hover::after{
+  transform: scaleX(1);
+}
+
 
 .User{
   display: flex;
@@ -275,25 +159,202 @@ color: #FFFFFF;
   font-size: 1.3rem;
 }
 
-.row{
-  border: 1px solid red;
-}
 
-.col-md-3{
-  border: 1px solid rgb(212, 255, 0);
-}
+
 
 .col-md-6{
-  border: 1px solid rgb(0, 204, 255);
+  background-color: rgba(253, 123, 52, 0.2);
 }
 
 
 .discover{
-  margin-top: -2.5rem;
+  margin-top: -0.5rem;
 }
 
 .dicover h3{
   font-family: 'League Spartan';
   font-weight: 700;
   font-size: 43px;
+}
+
+.trending-song{
+  padding: 2%;
+  text-align: end;
+}
+
+.trending-song h5{
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: 700;
+}
+
+.trending-song h2{
+  margin-top: -5px;
+  font-family: 'League Spartan';
+  font-weight: 700;
+  font-size: 43px;
+  cursor: pointer;
+}
+
+.trending-hit-details{
+  margin-top: -15px;
+  display: flex;
+  justify-content: end;
+  gap: 2rem;
+}
+
+.trending-hit-details p{
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.title-top-5{
+  margin-top: 3rem;
+  padding-right: 4%;
+  text-align: end;
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: 700;
+}
+
+
+.top-5s{
+  padding: 2%;
+  display: flex;
+  justify-content: space-between;
+}
+
+#top-1{
+  cursor: pointer;
+  text-align: center;
+  font-family: 'Slabo 13px';
+}
+
+.recent-playes-title{
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: 700;
+}
+
+.artist-1{
+  font-family: 'Song Myung';
+  text-align: center;
+  padding: 2%;
+}
+
+.artist-1 h4{
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.artist-1 img{
+  padding: auto;
+  border-radius: 5%;
+}
+
+.artist-2{
+  font-family: 'Song Myung';
+  text-align: center;
+  padding: 2%;
+}
+
+.artist-2 img{
+  padding: auto;
+  border-radius: 5%;
+}
+
+.artist-2 h4{
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+
+
+.top-artists-names{
+  display: flex;
+  justify-content: space-evenly;
+  padding: 2%;
+}
+
+/* music player */
+
+.music-player{
+  border-radius: 5%;
+  border: 1px solid white;
+  background: linear-gradient(#4a4949, #1e1e1e);
+}
+
+.screen-body{
+  padding: 5%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.screen-body img{
+  border-radius: 5%;
+  width: 150px;
+  height: 140px;
+}
+
+.screen-body h3{
+  font-family: Nunito;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: aliceblue;
+}
+
+.screen-body p{
+  font-family: Montserrat;
+  font-size: 1rem;
+  font-weight: 700;
+  margin-top: -10px;
+}
+
+.music-timeline {
+  width: 90%;
+  height: 5px;
+  background-color: #ddd;
+  
+}
+
+.music-timeline .progress {
+  height: 100%;
+  background-color: #ff4f5a;
+}
+
+
+.music-controls{
+  display: flex;
+  justify-content:space-between;
+  align-items: center;
+}
+
+.music-controls a{
+  text-decoration: none;
+  color: #ffffff;
+}
+
+#pause{
+  font-size: 2.4rem;
+}
+
+#prev,
+#next{
+  font-size: 2rem;
+   margin-top: 5px;
+}
+
+.pnp{
+  display: flex;
+  gap: 10px;
+}
+
+.shuffle a{
+  margin-right: 1rem;
+  margin-top: 5px;
+  font-size: 1.5rem;
+}
+
+.liked a{
+  margin-left: 1rem;
+  margin-top: 5px;
+  font-size: 1.5rem;
 }
