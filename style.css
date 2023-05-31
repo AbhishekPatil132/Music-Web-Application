@@ -358,3 +358,14 @@ color: #FFFFFF;
   margin-top: 5px;
   font-size: 1.5rem;
 }
+
+.shuffle-like{
+  color: #ffffff;
+  margin-top: 4%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.shuffle-like a{
+  color: #ffffff;
+}
