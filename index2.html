@@ -49,7 +49,7 @@
             <div class="col-md-3">
                 <div class="menu">
                     <h3>Menu</h3>
-                    <a href="#">Search</a><br>
+                    <a href="./search.html">Search</a><br>
                     <a href="#">Genres</a><br>
                     <a href="#">Albums</a><br>
                     <a href="#">Artists</a>
@@ -78,39 +78,39 @@
                     <h5>Trending New Hits</h5>
                     <h2 id="trending-song">The Billionaire</h2>
                     <div class="trending-hit-details">
-                        <p id="trending-hit-artist">Mr Artist</p>
-                        <p id="trending-hit-listeners">4M <span>plays</span></p>
+                        <p id="trending-hit-artist">Artist</p>
+                        <p >Plays: <span id="trending-hit-listeners">4M</span> </p>
                     </div>
                 </div>
                 <div class="top-5">
                     <div class="title-top-5">
                         <h3>Global Top 5</h3>
-                    </div>
+                    </div> 
                     <div class="top-5s">
-                        <div id="top-1">
-                            <img src="pexels-david-yu-1749822.jpg" width="55px" height="40px" />
-                            <h5>Your Smile</h5>
-                            <h6>Artist</h6>
-                        </div>
                         <div id="top-2">
-                            <img src="pexels-david-yu-1749822.jpg" width="55px" height="40px" />
-                            <h5>Your Smile</h5>
-                            <h6>Artist</h6>
+                            <img src="2nddd.jpg" width="55px" height="40px" />
+                            <h5 id="song1">Your Smile</h5>
+                            <h6 id="artist1">Artist</h6>
                         </div>
                         <div id="top-3">
-                            <img src="pexels-david-yu-1749822.jpg" width="55px" height="40px" />
-                            <h5>Your Smile</h5>
-                            <h6>Artist</h6>
+                            <img src="3rd.jpg" width="55px" height="40px" />
+                            <h5 id="song2">Your Smile</h5>
+                            <h6 id="artist2">Artist</h6>
                         </div>
                         <div id="top-4">
-                            <img src="pexels-david-yu-1749822.jpg" width="55px" height="40px" />
-                            <h5>Your Smile</h5>
-                            <h6>Artist</h6>
+                            <img src="4thh.jpg" width="55px" height="40px" />
+                            <h5 id="song3">Your Smile</h5>
+                            <h6 id="artist3">Artist</h6>
                         </div>
                         <div id="top-5">
-                            <img src="pexels-david-yu-1749822.jpg" width="55px" height="40px" />
-                            <h5>Your Smile</h5>
-                            <h6>Artist</h6>
+                            <img src="5th.jfif" width="55px" height="40px" />
+                            <h5 id="song4">Your Smile</h5>
+                            <h6 id="artist4">Artist</h6>
+                        </div>
+                        <div id="top-6">
+                            <img src="6th.jfif" width="55px" height="40px" />
+                            <h5 id="song5">Your Smile</h5>
+                            <h6 id="artist5">Artist</h6>
                         </div>
                     </div>
                 </div>
@@ -132,16 +132,16 @@
                     
                     <div class="screen-body">
                         <img src="pexels-rodolfo-quirós-1727280.jpg" alt="">
-                        <h3 style="font-family: Nunito;">Calm Down</h3>
-                        <p>Kendrick Mac</p>
-                        <div class="music-timeline"></div>
+                        <h3 id="playing-song" style="font-family: Nunito;">Calm Down</h3>
+                        <p id="playing-song-artist">Kendrick Mac</p>
+                        <input type="range" value="0" id="progress">
                         <div class="music-controls">
                             <div class="shuffle">
                                 <a id="shuffle" href="#"><i class='bx bx-shuffle' onclick="shuffle()"></i></a>
                             </div>
                             <div class="pnp">
                                 <a id="prev" href="#"><i class='bx bx-skip-previous'></i></a>
-                                <a id="pause" href="#"><i class='bx bx-pause-circle'></i></a>
+                                <a id="pause" href="#"><i class='bx bx-play-circle'></i></a>
                                 <a id="next" href="#"><i class='bx bx-skip-next'></i></a>
                             </div>
                             <div class="liked">
@@ -149,7 +149,7 @@
                             </div>
                         </div>
                     </div>
-                    <audio id="audio" src="Vaaste - Dhvani Bhanushali-(PagalWorld.Ink).mp3" preload="none" controls></audio>
+                    <audio id="audio" preload="none" style="display: none;" controls></audio>
                 </div>
             </div>
         </div>
