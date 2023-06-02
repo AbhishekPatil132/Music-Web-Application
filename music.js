@@ -128,6 +128,9 @@ let playTrendingSong = async () => {
     const songName = topTrack.name;
     const artistName = topTrack.artist.name;
 
+    const image = topTrack.image[2]['#text'];
+
+    document.getElementById('playing-song-img').src = image;
     document.getElementById('playing-song').innerHTML = songName;
     document.getElementById('playing-song-artist').innerHTML = artistName;
   } catch (error) {
@@ -223,7 +226,87 @@ let Song = document.getElementById('audio');
 
 
 
+// ************ API for Top 2 Artists from India ***************
+
+async function fetchTopArtists() {
+  try {
+    const apiKey = '54eea564740c511910bb580592d841f7'; // Replace with your Last.fm API key
+    const country = 'india';
+
+    const apiUrl = `https://ws.audioscrobbler.com/2.0/?method=geo.gettopartists&country=${country}&api_key=${apiKey}&format=json`;
+
+    const response = await fetch(apiUrl);
+    const data = await response.json();
+
+    if (data.error) {
+      console.error('Error fetching top artists:', data.message);
+      return;
+    }
+
+    const topArtists = data.topartists.artist.slice(0, 2); // Get the top 2 artists
+    let m = 1;
+
+    topArtists.forEach((artist) => {
+      const artistName = artist.name;
+      const artistImage = artist.image[1]['#text'];
+
+      document.getElementById(`img${m}`).src = artistImage;
+      document.getElementById(`top-artist${m}`).innerHTML = artistName;
+      m = m + 1;
+    });
+  } catch (error) {
+    console.error('Error fetching top artists:', error);
+  }
+}
+
+fetchTopArtists();
 
 
+// *********  Playing the Top 5 Songs *************
 
+const playSong = (songName, artistName, imageUrl) => {
+  document.getElementById('playing-song').innerHTML = songName;
+  document.getElementById('playing-song-artist').innerHTML = artistName;
+  document.getElementById('playing-song-img').src = imageUrl;
+  // add code to play the song here
+};
+
+// Event listeners for top 5 songs
+document.getElementById('top-2').addEventListener('click', () => {
+  const songName = document.getElementById('song1').innerHTML;
+  const artistName = document.getElementById('artist1').innerHTML;
+  const imageUrl = document.getElementById('top-2').querySelector('img').src;
+  playSong(songName, artistName, imageUrl);
+});
+
+document.getElementById('top-3').addEventListener('click', () => {
+  const songName = document.getElementById('song2').innerHTML;
+  const artistName = document.getElementById('artist2').innerHTML;
+  const imageUrl = document.getElementById('top-3').querySelector('img').src;
+  playSong(songName, artistName, imageUrl);
+});
+
+document.getElementById('top-4').addEventListener('click', () => {
+  const songName = document.getElementById('song3').innerHTML;
+  const artistName = document.getElementById('artist3').innerHTML;
+  const imageUrl = document.getElementById('top-4').querySelector('img').src;
+  playSong(songName, artistName, imageUrl);
+});
+
+document.getElementById('top-5').addEventListener('click', () => {
+  const songName = document.getElementById('song4').innerHTML;
+  const artistName = document.getElementById('artist4').innerHTML;
+  const imageUrl = document.getElementById('top-5').querySelector('img').src;
+  playSong(songName, artistName, imageUrl);
+});
+
+document.getElementById('top-6').addEventListener('click', () => {
+  const songName = document.getElementById('song5').innerHTML;
+  const artistName = document.getElementById('artist5').innerHTML;
+  const imageUrl = document.getElementById('top-6').querySelector('img').src;
+  playSong(songName, artistName, imageUrl);
+});
+
+
+// **************** API for Artist details ******************
 

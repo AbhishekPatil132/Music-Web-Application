@@ -14,7 +14,7 @@
 </head>
 
 <body>
-    <div class="main container-fluid">
+    <div class="main fluid-container">
         <div class="row">
             <div class="col-md-3 dashboard">
                 <div id="dashboard">
@@ -26,7 +26,7 @@
 
             <div class="col-md-6">
                 <div style="float: left;" class="nvbar">
-                    <a href="#">Music</a>
+                    <a href="#" class="active">Music</a>
                     <a href="#">Podcast</a>
                     <a href="#">Live</a>
                     <a href="#">Radio</a>
@@ -119,19 +119,19 @@
             <div class="col-md-3">
                 <div class="top-artists-names">
                     <div class="artist-1">
-                        <img src="Desktop - 1.png" width="80px" height="60px">
-                        <h4>R.Wilson</h4>
+                        <img id="img1" src="Desktop - 1.png" width="80px" height="60px">
+                        <h4 id="top-artist1">R.Wilson</h4>
                     </div>
                     <div class="artist-2">
-                        <img src="Desktop - 1.png" width="80px" height="60px">
-                        <h4>R.Wilson</h4>
+                        <img id="img2" src="Desktop - 1.png" width="80px" height="60px">
+                        <h4 id="top-artist2">R.Wilson</h4>
                     </div>
                 </div>
 
                 <div class="music-player">
                     
                     <div class="screen-body">
-                        <img src="pexels-rodolfo-quirós-1727280.jpg" alt="">
+                        <img id="playing-song-img" src="pexels-rodolfo-quirós-1727280.jpg" alt="">
                         <h3 id="playing-song" style="font-family: Nunito;">Calm Down</h3>
                         <p id="playing-song-artist">Kendrick Mac</p>
                         <input type="range" value="0" id="progress">

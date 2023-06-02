@@ -51,6 +51,7 @@ line-height: 40px;
   padding-bottom: 4px;
   position: relative;
   text-decoration: none;
+  cursor: no-drop;
 }
 
 .nvbar a::after{
@@ -105,6 +106,7 @@ color: #FFFFFF;
 }
 
 .menu{
+  padding-top: 5%;
   margin-top: -2.5rem;
   text-align: center;
   font-family: 'League Spartan';
@@ -138,6 +140,7 @@ color: #FFFFFF;
   color: #fab6b6;
   font-weight: 500;
   font-size: 1.3rem;
+  cursor: no-drop;
 }
 
 .Tags{
@@ -331,7 +334,7 @@ color: #FFFFFF;
 .music-player{
   border-radius: 5%;
   border: 1px solid white;
-  background: linear-gradient(#4a4949, #1e1e1e);
+  background: linear-gradient(#b5190177, #b5000084);
 }
 
 .screen-body{
